@@ -39,7 +39,7 @@ async function run() {
     // push dist
     try {
       await exec('git', ['add', 'dist/index.js']);
-      await exec('git', ['commit', '-a', '-m', commitMsg]);
+      await exec('git', ['commit', '-m', commitMsg]);
     } catch (error) {
       if (error.stdout.includes('nothing to commit, working tree clean')) {
         return core.info('Nothing to commit! 🙂');
