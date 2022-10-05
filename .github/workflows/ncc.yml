@@ -6,7 +6,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@main
+    - uses: actions/checkout@v3
     - uses: planningcenter/ncc-build@main
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
