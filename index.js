@@ -46,7 +46,6 @@ async function run() {
       }
       throw error;
     }
-    
 
     core.endGroup('Pushing dist');
     await exec('git', ['push', 'origin', `HEAD:${inputBranch}`]);  
