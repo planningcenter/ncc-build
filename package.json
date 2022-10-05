@@ -1,5 +1,5 @@
 {
-  "name": "ncc",
+  "name": "ncc-build",
   "version": "1.0.4",
   "description": "ncc github action",
   "main": "index.js",
@@ -11,19 +11,19 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+git@github.com:tool3/ncc.git"
+    "url": "git+git@github.com:planningcenter/ncc-build.git"
   },
   "keywords": [
     "github",
     "ncc",
     "continuous integration"
   ],
-  "author": "Tal Hayut",
+  "author": "Planning Center",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/tool3/ncc/issues"
+    "url": "https://github.com/planningcenter/ncc-build/issues"
   },
-  "homepage": "https://github.com/tool3/ncc#readme",
+  "homepage": "https://github.com/planningcenter/ncc-build#readme",
   "dependencies": {
     "@actions/core": "^1.9.1",
     "@actions/exec": "^1.0.2"
