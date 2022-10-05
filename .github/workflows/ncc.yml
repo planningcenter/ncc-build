@@ -7,7 +7,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v3
+    - uses: actions/setup-node@v3
+      with:
+        cache: npm
+    - run: npm ci
     - uses: planningcenter/ncc-build@main
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
-        src: 'index.js'
+        src: index.js

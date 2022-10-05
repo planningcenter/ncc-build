@@ -14,13 +14,7 @@ async function run() {
     const allowUnrelated = core.getInput('allow_unrelated');
     const src = path.resolve(path.join(process.cwd(), core.getInput('src')));
  
-    // pull latest
-    await exec('git', ['pull', 'origin', inputBranch, allowUnrelated ? '--allow-unrelated-histories' : '', '--rebase']);
-
     core.startGroup(`Compiling ${src}`);
-
-    // install dependencies
-    await exec('npm', ['install']);
 
     // compile code
     const compileArgs = ['@vercel/ncc', 'build', src];
@@ -46,7 +40,6 @@ async function run() {
       }
       throw error;
     }
-    
 
     core.endGroup('Pushing dist');
     await exec('git', ['push', 'origin', `HEAD:${inputBranch}`]);  
